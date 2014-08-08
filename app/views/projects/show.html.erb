@@ -1,1 +1,22 @@
 <h1><%= @project.title %></h1>
+<h2><%= @project.name %></h2>
+
+<ul>
+  <% @project.tasks.each do |task| %>
+  <li>
+    <%= task.title %>
+    <%= link_to "[Delete]", project_task_path(task.project_id, task.id), method: :delete, data: { confirm: "are you sure?" } %>
+  </li>
+  <% end %>
+  <li>
+    <%= form_for [@project, @project.tasks.build] do |f| %>
+    <%= f.text_field :title %>
+
+<%= @project.tasks[0].errors.inspect %>
+
+
+    <%= f.submit %>
+    <%= render :text => 'hello!!' %>
+    <% end %>
+  </li>
+</ul>

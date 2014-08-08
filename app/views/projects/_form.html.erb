@@ -4,8 +4,25 @@
 <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %><br>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
+    <%= f.label :join_nexway %><br>
+    <%= f.text_field :join_nexway %><br>
+    <%= f.label :speciality %><br>
+    <%= f.text_field :speciality %><br>
+    <%= f.label :past_experience %><br>
+    <%= f.text_field :past_experience %><br>
+    <%= f.label :hobby %><br>
+    <%= f.text_field :hobby %><br>
+    <%= f.label :favorite_food %><br>
+    <%= f.text_field :favorite_food %><br>
+    <%= f.label :join_recruit %><br>
+    <%= f.text_field :join_recruit %><br>
+    <%= f.label :email_address %><br>
+    <%= f.text_field :email_address %><br>
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %><br>
+    <%= @modified_at = DateTime.now.to_datetime %>
+    <%= @created_at = DateTime.now.to_datetime %>
+
     <% if @project.errors.any? %>
     <%= @project.errors.messages[:title][0] %>
     <% end %>

@@ -19,15 +19,19 @@
   margin: 0px 0 15px 0;
   font-size: 230%;
   font-weight: bold;
-  color: #ffe000;
+  color: #00ffad;
   text-shadow: 2px 2px 7px black;
 }
 
 body {
   text-align: center;
-  background-image: url('http://flowerillust.com/img/flower/flower-back0101.jpg');
+  background-image: url('http://livedoor.blogimg.jp/kokoromirushashin-hiroka/imgs/e/2/e2a928c6.jpg');
+
 }
 
-li {
+li, a {
   overflow: hidden;
+  font-weight: bold;
+  color: #87f53e;
+  text-shadow: 1px 1px 1px black;
 }

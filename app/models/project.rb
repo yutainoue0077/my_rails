@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+  mount_uploader :image, PictureUploader
   has_many :tasks
   validates :title,
   presence: { message: "入力をお願いします。" },

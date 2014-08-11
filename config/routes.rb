@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :tasks, only: [:create, :destroy]
-    resources :hobbies, only: [:create, :destroy]
+    resources :hobbies
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

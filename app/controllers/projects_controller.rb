@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @hobby = Hobby.new
   end
 
   def create

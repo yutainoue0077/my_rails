@@ -31,3 +31,20 @@
     <% end %>
   </li>
 </ul>
+
+
+<ul>
+  <% @project.hobbies.each do |hobby| %>
+  <li>
+    <%= hobby.hobby_japanese %>
+
+  </li>
+  <% end %>
+  <li>
+    <%= form_for [@project, @project.hobbies.build] do |f| %>
+    <%= f.text_field :hobby_japanese %><br>
+    <%= f.submit %><br>
+    <%= @project.errors.inspect %><br>
+    <% end %>
+  </li>
+</ul>

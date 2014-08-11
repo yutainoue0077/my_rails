@@ -11,7 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140808073458) do
+ActiveRecord::Schema.define(version: 20140811003911) do
+
+  create_table "favorite_foods", force: true do |t|
+    t.string   "favorite_food"
+    t.string   "favoriteFood_japanese"
+    t.integer  "favoriteFood_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hobbies", force: true do |t|
+    t.string   "hobby"
+    t.string   "hobby_japanese"
+    t.integer  "hobby_id"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "hobbies", ["project_id"], name: "index_hobbies_on_project_id"
+
+  create_table "past_experiences", force: true do |t|
+    t.string   "past_experience"
+    t.string   "pastExperience_japanese"
+    t.integer  "pastExperience_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "projects", force: true do |t|
     t.string   "title"
@@ -28,13 +55,20 @@ ActiveRecord::Schema.define(version: 20140808073458) do
     t.datetime "modified_at"
     t.datetime "created_at"
     t.string   "image"
+    t.string   "nickname"
     t.datetime "updated_at"
-    t.string   "name"
+  end
+
+  create_table "specialities", force: true do |t|
+    t.string   "speciality"
+    t.string   "speciality_japanese"
+    t.integer  "speciality_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tasks", force: true do |t|
     t.string   "title"
-    t.boolean  "done",       default: false
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"

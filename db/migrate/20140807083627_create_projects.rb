@@ -5,7 +5,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :family_name
       t.string :given_name
       t.integer :join_nexway
-      t.string :speciality 
+      t.string :speciality
       t.string :past_experience
       t.string :hobby
       t.string :favorite_food
@@ -15,6 +15,7 @@ class CreateProjects < ActiveRecord::Migration
       t.timestamp :modified_at
       t.datetime :created_at
       t.string :image
+      t.string :nickname
 
       t.timestamps
     end

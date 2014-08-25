@@ -41,3 +41,5 @@ gem 'spring',        group: :development
 
 # For Carrierwave
 gem 'fog', '~> 1.3.1'
+
+gem 'devise'

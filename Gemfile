@@ -38,3 +38,6 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# For Carrierwave
+gem 'fog', '~> 1.3.1'
